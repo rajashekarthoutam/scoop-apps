@@ -1,0 +1,92 @@
+name: Sync and Verify Scoop Apps Bucket
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force re-download and re-verify all manifests'
+        required: false
+        type: boolean
+        default: false
+      app_name:
+        description: 'Optional single app name to sync (leave blank for all)'
+        required: false
+        type: string
+        default: ''
+  push:
+    paths:
+      - 'config/apps.json'
+      - 'scripts/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-verify:
+    name: Sync, Verify, and Update Manifests
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Curated Bucket Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync and Verify Manifests from Upstream Buckets
+        id: sync
+        shell: pwsh
+        run: |
+          $params = @{}
+          if ("${{ github.event.inputs.force }}" -eq "true") {
+              $params["Force"] = $true
+          }
+          if ("${{ github.event.inputs.app_name }}") {
+              $params["AppName"] = "${{ github.event.inputs.app_name }}"
+          }
+          
+          ./scripts/sync-and-verify.ps1 @params
+
+      - name: Run Bucket Manifest Lint & Integrity Tests
+        shell: pwsh
+        run: |
+          ./scripts/test-bucket.ps1
+
+      - name: Run Cloudflare-Aligned Enterprise Security Audit
+        shell: pwsh
+        run: |
+          ./scripts/security-audit.ps1 -Strict
+
+      - name: Run Multi-Engine VirusTotal & Antivirus Threat Scan
+        shell: pwsh
+        env:
+          VIRUSTOTAL_API_KEY: ${{ secrets.VIRUSTOTAL_API_KEY }}
+        run: |
+          ./scripts/verify-hashes-and-malware.ps1
+
+      - name: Commit and Push Verified Updates
+        shell: pwsh
+        run: |
+          $status = git status --porcelain
+          if (-not $status) {
+              Write-Host "No changes detected. All curated manifests are up to date."
+              exit 0
+          }
+
+          Write-Host "Detected changes in manifests. Committing..."
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add bucket/ config/
+          
+          $updatedApps = "${{ steps.sync.outputs.updated_apps }}"
+          if (-not $updatedApps) {
+              $updatedApps = "manifests"
+          }
+          
+          $commitMsg = "chore(sync): update bucket manifests [$updatedApps] [skip ci]"
+          git commit -m $commitMsg
+          git push
