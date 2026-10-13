@@ -1,34 +1,34 @@
 ﻿{
-    "version":  "2026-10-11",
-    "description":  "Open source digital design and verification tools. Includes tools for RTL synthesis, formal hardware verification, place \u0026 route, FPGA programming, and testing with support for HDLs like Verilog, Migen and Amaranth.",
-    "homepage":  "https://github.com/YosysHQ/oss-cad-suite-build",
-    "license":  "ISC",
-    "architecture":  {
-                         "64bit":  {
-                                       "url":  "https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2026-10-11/oss-cad-suite-windows-x64-20261011.tgz",
-                                       "hash":  "947643577937c89226b0bc02d2ac9643f0906c4ad4e1da2da46d49d88196fb0b"
-                                   }
-                     },
-    "extract_dir":  "oss-cad-suite",
-    "pre_install":  "Set-Content -Path \"$dir\\start.bat\" -Value \"@cmd /k $dir\\environment.bat\"",
-    "bin":  [
-                [
-                    "start.bat",
-                    "oss-cad"
-                ],
-                [
-                    "environment.ps1",
-                    "oss-cad-pwsh"
-                ]
-            ],
-    "checkver":  {
-                     "github":  "https://github.com/YosysHQ/oss-cad-suite-build"
-                 },
-    "autoupdate":  {
-                       "architecture":  {
-                                            "64bit":  {
-                                                          "url":  "https://github.com/YosysHQ/oss-cad-suite-build/releases/download/$version/oss-cad-suite-windows-x64-$cleanVersion.tgz"
-                                                      }
-                                        }
-                   }
+  "version": "2026-10-13",
+  "description": "Open source digital design and verification tools. Includes tools for RTL synthesis, formal hardware verification, place & route, FPGA programming, and testing with support for HDLs like Verilog, Migen and Amaranth.",
+  "homepage": "https://github.com/YosysHQ/oss-cad-suite-build",
+  "license": "ISC",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2026-10-13/oss-cad-suite-windows-x64-20261013.tgz",
+      "hash": "d1bad77b4c2323275a657a385479ca82f1c4a4b3eab80f77a7bfd19f16433cdf"
+    }
+  },
+  "extract_dir": "oss-cad-suite",
+  "pre_install": "Set-Content -Path \"$dir\\start.bat\" -Value \"@cmd /k $dir\\environment.bat\"",
+  "bin": [
+    [
+      "start.bat",
+      "oss-cad"
+    ],
+    [
+      "environment.ps1",
+      "oss-cad-pwsh"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/YosysHQ/oss-cad-suite-build"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/YosysHQ/oss-cad-suite-build/releases/download/$version/oss-cad-suite-windows-x64-$cleanVersion.tgz"
+      }
+    }
+  }
 }
