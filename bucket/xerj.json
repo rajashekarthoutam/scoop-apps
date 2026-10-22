@@ -1,0 +1,35 @@
+{
+    "version": "1.0.0-rc.98",
+    "description": "Local-first search engine and MCP server in Rust for AI coding agents",
+    "homepage": "https://github.com/xerj-org/xerj",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/xerj-org/xerj/releases/download/v1.0.0-rc.98/xerj-1.0.0-rc.98-x86_64-pc-windows-msvc.zip",
+            "hash": "b881c43528ba9095a4e5d4b5d8b7accc81786b76444b77a60cae715204be2c22",
+            "extract_dir": "xerj-1.0.0-rc.98-x86_64-pc-windows-msvc"
+        },
+        "arm64": {
+            "url": "https://github.com/xerj-org/xerj/releases/download/v1.0.0-rc.98/xerj-1.0.0-rc.98-aarch64-pc-windows-msvc.zip",
+            "hash": "32a75b2a34b290c2fb795e8c8506c90bf6b710c7ccc6627e742c2f05dec3abe5",
+            "extract_dir": "xerj-1.0.0-rc.98-aarch64-pc-windows-msvc"
+        }
+    },
+    "bin": "xerj.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xerj-org/xerj/releases/download/v/xerj--x86_64-pc-windows-msvc.zip",
+                "extract_dir": "xerj--x86_64-pc-windows-msvc"
+            },
+            "arm64": {
+                "url": "https://github.com/xerj-org/xerj/releases/download/v/xerj--aarch64-pc-windows-msvc.zip",
+                "extract_dir": "xerj--aarch64-pc-windows-msvc"
+            }
+        },
+        "hash": {
+            "url": ".sha256"
+        }
+    }
+}

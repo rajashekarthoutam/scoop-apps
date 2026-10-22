@@ -1,0 +1,199 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "upstream_buckets": {
+    "main": "https://raw.githubusercontent.com/ScoopInstaller/Main/master/bucket",
+    "extras": "https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket",
+    "versions": "https://raw.githubusercontent.com/ScoopInstaller/Versions/master/bucket"
+  },
+  "settings": {
+    "verify_urls": true,
+    "format_json": true
+  },
+  "tracked_apps": [
+    {
+      "name": "7zip",
+      "source_bucket": "main",
+      "description": "High compression file archiver"
+    },
+    {
+      "name": "git",
+      "source_bucket": "main",
+      "description": "Fast, scalable, distributed revision control system"
+    },
+    {
+      "name": "gh",
+      "source_bucket": "main",
+      "description": "GitHub\u2019s official command line tool"
+    },
+    {
+      "name": "ripgrep",
+      "source_bucket": "main",
+      "description": "Extremely fast line-oriented search tool"
+    },
+    {
+      "name": "jq",
+      "source_bucket": "main",
+      "description": "Lightweight and flexible command-line JSON processor"
+    },
+    {
+      "name": "curl",
+      "source_bucket": "main",
+      "description": "Command line tool for transferring data with URLs"
+    },
+    {
+      "name": "pwsh",
+      "source_bucket": "main",
+      "description": "PowerShell 7 (Cross-platform)"
+    },
+    {
+      "name": "starship",
+      "source_bucket": "main",
+      "description": "The minimal, blazing-fast, and infinitely customizable prompt"
+    },
+    {
+      "name": "neovim",
+      "source_bucket": "main",
+      "description": "Vim-fork focused on extensibility and usability"
+    },
+    {
+      "name": "vlc",
+      "source_bucket": "extras",
+      "description": "Multimedia player and framework"
+    },
+    {
+      "name": "vscode",
+      "source_bucket": "extras",
+      "description": "Visual Studio Code"
+    },
+    {
+      "name": "arduino",
+      "source_bucket": "extras",
+      "description": "Arduino IDE 2.x - Open-source electronics prototyping platform"
+    },
+    {
+      "name": "arduino-cli",
+      "source_bucket": "main",
+      "description": "Arduino Command Line Interface"
+    },
+    {
+      "name": "kicad",
+      "source_bucket": "extras",
+      "description": "Electronics Design Automation Suite"
+    },
+    {
+      "name": "openscad",
+      "source_bucket": "extras",
+      "description": "The Programmers Solid 3D CAD Modeller"
+    },
+    {
+      "name": "prusaslicer",
+      "source_bucket": "extras",
+      "description": "G-code generator for 3D printers (RepRap, Makerbot, Ultimaker etc.)"
+    },
+    {
+      "name": "pronterface",
+      "source_bucket": "custom",
+      "description": "Pronterface 3D printer GUI host and printer control software (Printrun)"
+    },
+    {
+      "name": "iverilog",
+      "source_bucket": "main",
+      "description": "Icarus Verilog simulator and GTKWave waveform viewer for digital design verification"
+    },
+    {
+      "name": "oss-cad-suite-nightly",
+      "source_bucket": "versions",
+      "description": "Complete open-source FPGA toolchain (Gowin/Tang Nano, nextpnr-gowin, openFPGALoader, Yosys, Verilator, GTKWave)"
+    },
+    {
+      "name": "gcc",
+      "source_bucket": "main",
+      "description": "GNU Compiler Collection and binutils (MinGW-w64)"
+    },
+    {
+      "name": "llvm",
+      "source_bucket": "main",
+      "description": "LLVM and Clang compiler toolchain with clangd and clang-format"
+    },
+    {
+      "name": "cmake",
+      "source_bucket": "main",
+      "description": "Cross-platform open-source build system generator"
+    },
+    {
+      "name": "ninja",
+      "source_bucket": "main",
+      "description": "Small build system with a focus on speed"
+    },
+    {
+      "name": "make",
+      "source_bucket": "main",
+      "description": "GNU Make build utility"
+    },
+    {
+      "name": "gdb",
+      "source_bucket": "main",
+      "description": "The GNU Project Debugger"
+    },
+    {
+      "name": "cppcheck",
+      "source_bucket": "main",
+      "description": "Static analysis tool for C/C++ code"
+    },
+    {
+      "name": "python",
+      "source_bucket": "main",
+      "description": "Python programming language"
+    },
+    {
+      "name": "uv",
+      "source_bucket": "main",
+      "description": "Extremely fast Python package and project manager written in Rust"
+    },
+    {
+      "name": "ruff",
+      "source_bucket": "main",
+      "description": "Extremely fast Python linter and code formatter written in Rust"
+    },
+    {
+      "name": "pipx",
+      "source_bucket": "main",
+      "description": "Install and run Python applications in isolated environments"
+    },
+    {
+      "name": "poetry",
+      "source_bucket": "main",
+      "description": "Python dependency management and packaging tool"
+    },
+    {
+      "name": "ollama",
+      "source_bucket": "main",
+      "description": "Run large language models locally (Llama, Mistral, Gemma, etc.)"
+    },
+    {
+      "name": "aichat",
+      "source_bucket": "main",
+      "description": "All-in-one AI CLI tool supporting OpenAI, Claude, Gemini, Ollama, etc."
+    },
+    {
+      "name": "mods",
+      "source_bucket": "main",
+      "description": "AI-based command line pipeline tool by Charm"
+    },
+    {
+      "name": "claude-code",
+      "source_bucket": "main",
+      "description": "Agentic coding tool by Anthropic"
+    },
+    {
+      "name": "bun",
+      "source_bucket": "main",
+      "description": "Incredibly fast JavaScript runtime, bundler, and package manager"
+    },
+    {
+      "name": "xerj",
+      "source_bucket": "custom",
+      "description": "Local-first search engine and MCP server in Rust for AI coding agents"
+    }
+  ]
+}

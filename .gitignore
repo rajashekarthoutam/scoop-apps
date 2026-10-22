@@ -1,0 +1,13 @@
+# Temporary & Cache files
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# PowerShell transient data
+*.ps1xml
+*~
+
+# Scoop local cache if placed inside workspace
+.cache/
+cache/
