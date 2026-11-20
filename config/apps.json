@@ -96,6 +96,16 @@
       "description": "Pronterface 3D printer GUI host and printer control software (Printrun)"
     },
     {
+      "name": "inkscape",
+      "source_bucket": "extras",
+      "description": "Professional vector graphics editor (SVG, DXF, G-Code generation)"
+    },
+    {
+      "name": "universal-gcode-sender",
+      "source_bucket": "extras",
+      "description": "Cross-platform G-Code sender, firmware flasher, and CNC controller platform (UGS)"
+    },
+    {
       "name": "iverilog",
       "source_bucket": "main",
       "description": "Icarus Verilog simulator and GTKWave waveform viewer for digital design verification"
