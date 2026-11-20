@@ -1,4 +1,4 @@
-﻿{
+{
     "version": "1.1.1",
     "description": "Pre-built Icarus Verilog toolchain compiler and simulation runtime (iverilog, vvp, iverilog-vpi).",
     "homepage": "https://github.com/FPGAwars/toolchain-iverilog",
