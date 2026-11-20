@@ -1,28 +1,28 @@
 ﻿{
-    "version":  "14-20260804",
-    "description":  "Compiler for IEEE-1364 Verilog hardware description language.",
-    "homepage":  "https://bleyer.org/icarus/",
-    "license":  "GPL-2.0-or-later",
-    "architecture":  {
-                         "64bit":  {
-                                       "url":  "https://bleyer.org/icarus/iverilog-v14-20260804-x64_setup.exe#/dl.7z",
-                                       "hash":  "5d65c90c269af75c12ba6e9af6ceb0d64511ea8913d0b2a28eb82e697521cf17"
-                                   }
-                     },
-    "pre_install":  "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstal*\" -Recurse -ErrorAction Ignore",
-    "bin":  [
-                "bin\\iverilog.exe",
-                "bin\\iverilog-vpi.exe",
-                "bin\\vvp.exe",
-                "bin\\gtkwave.exe"
-            ],
-    "env_add_path":  "bin",
-    "checkver":  "iverilog-v([\\d.-]+)-x64_setup\\.exe",
-    "autoupdate":  {
-                       "architecture":  {
-                                            "64bit":  {
-                                                          "url":  "https://bleyer.org/icarus/iverilog-v$version-x64_setup.exe#/dl.7z"
-                                                      }
-                                        }
-                   }
+    "version": "1.1.1",
+    "description": "Pre-built Icarus Verilog toolchain compiler and simulation runtime (iverilog, vvp, iverilog-vpi).",
+    "homepage": "https://github.com/FPGAwars/toolchain-iverilog",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/FPGAwars/toolchain-iverilog/releases/download/v1.1.1/toolchain-iverilog-windows_amd64-1.1.1.tar.gz",
+            "hash": "4698ebfdbb17f22c0db0d0977c2c4b8990e4d529b580cd67949d8823c9bdf28c"
+        }
+    },
+    "bin": [
+        "bin\\iverilog.exe",
+        "bin\\iverilog-vpi.exe",
+        "bin\\vvp.exe"
+    ],
+    "env_add_path": "bin",
+    "checkver": {
+        "github": "https://github.com/FPGAwars/toolchain-iverilog"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/FPGAwars/toolchain-iverilog/releases/download/v$version/toolchain-iverilog-windows_amd64-$version.tar.gz"
+            }
+        }
+    }
 }
