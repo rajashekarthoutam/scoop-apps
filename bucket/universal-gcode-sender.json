@@ -24,7 +24,7 @@
             "shortcuts": [
                 [
                     "bin\\ugsplatform64.exe",
-                    "Universal G-Code Sender"
+                    "Universal G-Code Sender\\Universal G-Code Sender"
                 ]
             ]
         }

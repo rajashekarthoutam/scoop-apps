@@ -16,7 +16,7 @@
     "extract_dir":  "openscad-2021.01",
     "post_install":  [
                          "# OpenSCAD can\u0027t be started from a symlinked directory. See: https://github.com/openscad/openscad/issues/1309",
-                         "startmenu_shortcut \"$original_dir\\openscad.exe\" \u0027OpenSCAD\u0027 $null $null $global",
+                         "startmenu_shortcut \"$original_dir\\openscad.exe\" \u0027OpenSCAD\\OpenSCAD\u0027 $null $null $global",
                          "shim \"$original_dir\\openscad.com\" $global \u0027openscad\u0027"
                      ],
     "post_uninstall":  [

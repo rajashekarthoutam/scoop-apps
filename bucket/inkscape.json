@@ -28,7 +28,7 @@
     "shortcuts": [
         [
             "bin\\inkscape.exe",
-            "Inkscape"
+            "Inkscape\\Inkscape"
         ]
     ],
     "checkver": {

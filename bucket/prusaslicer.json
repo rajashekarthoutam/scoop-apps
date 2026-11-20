@@ -14,7 +14,7 @@
   "shortcuts": [
     [
       "prusa-slicer.exe",
-      "PrusaSlicer"
+      "PrusaSlicer\\PrusaSlicer"
     ]
   ],
   "checkver": {

@@ -22,7 +22,7 @@
     "shortcuts": [
         [
             "Pronterface.exe",
-            "Pronterface"
+            "Pronterface\\Pronterface"
         ]
     ],
     "checkver": {

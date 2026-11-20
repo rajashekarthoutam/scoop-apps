@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "10.0.8",
   "description": "Electronics Design Automation Suite",
   "homepage": "https://www.kicad.org",
@@ -18,35 +18,35 @@
   "shortcuts": [
     [
       "bin\\kicad.exe",
-      "KiCad"
+      "KiCad\\KiCad"
     ],
     [
       "bin\\eeschema.exe",
-      "Schematic Editor"
+      "KiCad\\Schematic Editor"
     ],
     [
       "bin\\pcbnew.exe",
-      "PCB Editor"
+      "KiCad\\PCB Editor"
     ],
     [
       "bin\\gerbview.exe",
-      "Gerber Viewer"
+      "KiCad\\Gerber Viewer"
     ],
     [
       "bin\\pcb_calculator.exe",
-      "Calculator Tools"
+      "KiCad\\Calculator Tools"
     ],
     [
       "bin\\pl_editor.exe",
-      "Drawing Sheet Editor"
+      "KiCad\\Drawing Sheet Editor"
     ],
     [
       "bin\\bitmap2component.exe",
-      "Image Converter"
+      "KiCad\\Image Converter"
     ],
     [
       "bin\\kicad-cmd.bat",
-      "KiCad Command Prompt"
+      "KiCad\\KiCad Command Prompt"
     ]
   ],
   "checkver": {
