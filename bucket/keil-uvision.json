@@ -1,0 +1,48 @@
+{
+    "version": "4.00d",
+    "description": "Keil uVision4 IDE and ARM Cortex-M/ARM7/ARM9 compiler toolchain",
+    "homepage": "https://www.keil.com/",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://api.github.com/repos/rajashekarthoutam/private-binaries/releases/assets/781772139#/keil-uvision4-portable.zip",
+            "hash": "fca879d01663b1c4f48ed86e2546cb9202835132bf7c4919a10d8086185b18d4"
+        },
+        "32bit": {
+            "url": "https://api.github.com/repos/rajashekarthoutam/private-binaries/releases/assets/781772139#/keil-uvision4-portable.zip",
+            "hash": "fca879d01663b1c4f48ed86e2546cb9202835132bf7c4919a10d8086185b18d4"
+        }
+    },
+    "bin": [
+        [
+            "UV4\\UV4.exe",
+            "keil"
+        ],
+        [
+            "UV4\\UV4.exe",
+            "uv4"
+        ],
+        [
+            "ARM\\BIN40\\armcc.exe",
+            "armcc"
+        ],
+        [
+            "ARM\\BIN40\\armasm.exe",
+            "armasm"
+        ],
+        [
+            "ARM\\BIN40\\armlink.exe",
+            "armlink"
+        ],
+        [
+            "ARM\\BIN40\\fromelf.exe",
+            "fromelf"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "UV4\\UV4.exe",
+            "Keil\\Keil uVision4"
+        ]
+    ]
+}

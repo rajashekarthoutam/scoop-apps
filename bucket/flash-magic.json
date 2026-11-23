@@ -1,0 +1,28 @@
+{
+    "version": "5.84",
+    "description": "Flash Magic microcontroller programming tool for NXP microcontrollers",
+    "homepage": "https://www.flashmagictool.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://api.github.com/repos/rajashekarthoutam/private-binaries/releases/assets/781772137#/flash-magic-portable.zip",
+            "hash": "caa3ef8bd796b30eddccb1604cb4e6e6c3327f1d9b16204d33889f157935cc6b"
+        },
+        "32bit": {
+            "url": "https://api.github.com/repos/rajashekarthoutam/private-binaries/releases/assets/781772137#/flash-magic-portable.zip",
+            "hash": "caa3ef8bd796b30eddccb1604cb4e6e6c3327f1d9b16204d33889f157935cc6b"
+        }
+    },
+    "bin": [
+        [
+            "FlashMagic.exe",
+            "flashmagic"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "FlashMagic.exe",
+            "Flash Magic\\Flash Magic"
+        ]
+    ]
+}

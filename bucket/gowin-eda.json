@@ -1,0 +1,44 @@
+{
+    "version": "1.9.11.03",
+    "description": "Gowin EDA FPGA Development Suite (IDE, Synthesis, Place & Route, and Programmer)",
+    "homepage": "https://www.gowinsemi.com/",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://api.github.com/repos/rajashekarthoutam/private-binaries/releases/assets/781772138#/gowin-eda-1.9.11.03-portable.zip",
+            "hash": "8c91a871ff7a0550daa8dd5be7531e5e5adb6cbe65d39447e1f6486f7309c1e1"
+        }
+    },
+    "bin": [
+        [
+            "IDE\\bin\\gw_ide.exe",
+            "gowin"
+        ],
+        [
+            "IDE\\bin\\gw_ide.exe",
+            "gw_ide"
+        ],
+        [
+            "Programmer\\bin\\programmer.exe",
+            "gowin-programmer"
+        ],
+        [
+            "Programmer\\bin\\programmer_cli.exe",
+            "gowin-programmer-cli"
+        ],
+        [
+            "IDE\\bin\\gao_analyzer.exe",
+            "gowin-gao"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "IDE\\bin\\gw_ide.exe",
+            "Gowin\\Gowin FPGA Designer"
+        ],
+        [
+            "Programmer\\bin\\programmer.exe",
+            "Gowin\\Gowin Programmer"
+        ]
+    ]
+}
